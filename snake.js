@@ -1,5 +1,8 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext('2d');
+const stbutton = document.querySelector(".gameStart")
+
+stbutton.addEventListener('click',gameStart);
 
 function gameStart() {
     snake = {
@@ -153,14 +156,14 @@ function checkDeath() {
     // hit walls
     if( (snake.body[0].x < 0) ||(snake.body[0].x >= BLOCK_SIZE)||(snake.body[0].y < 0) ||(snake.body[0].y >= BLOCK_SIZE)){
     
-    clearInterval(gameInterval);
+        clearInterval(gameInterval);
     
     }
     // hit body
     for (var i=1; i<snake.body.length; i++) {
     
         if (snake.body[0].x === snake.body[i].x && snake.body[0].y === snake.body[i].y) {
-        clearInterval(gameInterval);
+            clearInterval(gameInterval);
     
         }
     
