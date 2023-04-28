@@ -1,6 +1,6 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext('2d');
-const stbutton = document.querySelector(".gameStart")
+const stbutton = document.querySelector(".gameStart");
 
 stbutton.addEventListener('click',gameStart);
 
