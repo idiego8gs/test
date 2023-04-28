@@ -3,10 +3,13 @@ const ctx = canvas.getContext('2d');
 const stbutton = document.querySelector(".gameStart");
 
 stbutton.addEventListener('click',bclick);
+gameInterval = setInterval(0);
 
+let score = 0;
 function bclick() {
     clearInterval(gameInterval);
     gameStart();
+    score = 0;
 }
 
 function gameStart() {
@@ -28,7 +31,7 @@ function gameStart() {
 
 const BLOCK_SIZE = 20;
 
-let score = 0;
+
 
 function drawGame() {
     drawMap();
@@ -178,4 +181,3 @@ function checkDeath() {
 
 
 /////
-gameStart()
