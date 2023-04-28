@@ -129,12 +129,12 @@ function putApple() {
     for (let i=0; i<snake.body.length; i++) {
         
         if (snake.body[i].x === apple.x && snake.body[i].y === apple.y) {
-        apple.x = Math.floor(Math.random() * BLOCK_SIZE);
-        apple.y = Math.floor(Math.random() * BLOCK_SIZE);
-        putApple();
-        return;
+            apple.x = Math.floor(Math.random() * BLOCK_SIZE);
+            apple.y = Math.floor(Math.random() * BLOCK_SIZE);
+            putApple();
+            return;
         
-    }
+        }
     
     }
     
